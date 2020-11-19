@@ -17,10 +17,28 @@ import java.util.Map;
 public class HotelService {
     private final JdbcTemplate jdbcTemplate;
 
-   public List getData(String city) {
+    public Map<String, Object> save(Map<String, Object> hotel) {
+        Map<String, Object> sMap = jdbcTemplate.queryForMap("insert into hotel(hotelid,city,hotelname,rooms,landmark) values(?,?,?,?,?)",
+                Integer.parseInt((String) hotel.get("hotelid")),
+                hotel.get("city"),
+                hotel.get("hotelname"),
+                Integer.parseInt((String) hotel.get("rooms")),
+                hotel.get("landmark"));
+
+        return hotel;
+    }
+
+
+
+    public List getData(String city) {
        List hotels = jdbcTemplate.queryForList("select * from hotel where city = ?", city);
        return hotels;
    }
+
+    public Hotel updateHotel(Hotel hotel) {
+        jdbcTemplate.update("hotel set hotelname='SfC'where hotelid=?");
+        return updateHotel(hotel);
+    }
 }
 
 

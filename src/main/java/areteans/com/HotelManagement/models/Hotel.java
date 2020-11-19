@@ -9,10 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Hotel {
-    private int hotelID;
+    private Long hotelid;
     private String hotelname;
     private String city;
     private String landmark;
-    private int Rooms;
+    private int rooms;
 
 }
