@@ -1,14 +1,10 @@
 package areteans.com.HotelManagement.service;
 
-import areteans.com.HotelManagement.config.PostgresManager;
 import areteans.com.HotelManagement.models.Hotel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +14,7 @@ public class HotelService {
     private final JdbcTemplate jdbcTemplate;
 
     public Map<String, Object> save(Map<String, Object> hotel) {
-        Map<String, Object> sMap = jdbcTemplate.queryForMap("insert into hotel(hotelid,city,hotelname,rooms,landmark) values(?,?,?,?,?)",
+         jdbcTemplate.update("insert into hotel(hotelid,city,hotelname,rooms,landmark) values(?,?,?,?,?)",
                 Integer.parseInt((String) hotel.get("hotelid")),
                 hotel.get("city"),
                 hotel.get("hotelname"),

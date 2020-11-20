@@ -15,9 +15,9 @@ import java.util.Map;
 public class HotelController {
     private final HotelService hotelService;
 
-    @PostMapping(path = "chotel", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "insert", consumes = MediaType.APPLICATION_JSON_VALUE)
     public Map<String, Object> createDetails(@RequestBody Map<String, Object> hotel) {
-        return hotelService.save(hotel);
+        return this.hotelService.save(hotel);
     }
 
     @GetMapping(path = "db" , consumes = MediaType.APPLICATION_JSON_VALUE)
@@ -25,10 +25,6 @@ public class HotelController {
         return this.hotelService.getData(city);
     }
 
-    /*@PutMapping(path = "create/test")
-    public Hotel updateHotel(@RequestBody Hotel hotel) {
-        return hotelService.updateHotel(hotel);
-    }*/
 }
 
 

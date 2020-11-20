@@ -11,9 +11,6 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class CancelService {
     private final JdbcTemplate jdbcTemplate;
-   /* public  Map<String, Object> deleteHotel(Long hotelid) {
-        return jdbcTemplate.queryForMap("Delete from hotel where hotelid=?",hotelid);
-    }*/
     public void deleteHotel(Long hotelid){
         jdbcTemplate.update("Delete from hotel where hotelid=?",hotelid);
     }
