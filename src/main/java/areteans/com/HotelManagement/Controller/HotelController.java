@@ -1,6 +1,8 @@
 package areteans.com.HotelManagement.Controller;
 
 import areteans.com.HotelManagement.models.Hotel;
+import areteans.com.HotelManagement.models.HotelJPA;
+import areteans.com.HotelManagement.repository.HotelRepository;
 import areteans.com.HotelManagement.service.HotelService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -23,6 +25,16 @@ public class HotelController {
     @GetMapping(path = "db" , consumes = MediaType.APPLICATION_JSON_VALUE)
     public List getDataControl(@RequestParam(value="city")String city) {
         return this.hotelService.getData(city);
+    }
+
+
+    @PostMapping(path = "hotel6", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public HotelJPA createHotel(@RequestBody HotelJPA hotelJPA) {
+        return hotelService.saveHotel(hotelJPA);
+    }
+    @GetMapping(path="getdata",consumes=MediaType.APPLICATION_JSON_VALUE)
+    public HotelJPA getdata(@RequestParam(value="hotelid")long hotelid){
+        return hotelService.getHotelByID(hotelid);
     }
 
 }
