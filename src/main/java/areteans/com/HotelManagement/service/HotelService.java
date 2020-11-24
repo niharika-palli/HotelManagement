@@ -34,7 +34,7 @@ public class HotelService {
 
 
 
-   /* public Map<String, Object> save(Map<String, Object> hotel) {
+    public Map<String, Object> save(Map<String, Object> hotel) {
          jdbcTemplate.update("insert into hotel(hotelid,city,hotelname,rooms,landmark) values(?,?,?,?,?)",
                 Integer.parseInt((String) hotel.get("hotelid")),
                 hotel.get("city"),
@@ -43,7 +43,7 @@ public class HotelService {
                 hotel.get("landmark"));
 
         return hotel;
-    }*/
+    }
 
 
 
