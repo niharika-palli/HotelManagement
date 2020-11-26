@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -31,6 +32,10 @@ public class BookingController {
     public List getDataControl(@RequestParam(value="hotelid")Long hotelid) {
         return this.commonService.getData(hotelid);
     }
+   /* @PostMapping(path="simple",consumes = MediaType.APPLICATION_JSON_VALUE)
+    public Map<String,Object> simpleBooking(@RequestBody Map<String,Object>hotelJPA){
+        return commonService.simpleBookingJpa(hotelJPA);
+    }*/
 
 
 }

@@ -2,6 +2,7 @@ package areteans.com.HotelManagement.service;
 
 
 import areteans.com.HotelManagement.models.Booking;
+import areteans.com.HotelManagement.repository.HotelRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class CommonService {
     private final JdbcTemplate jdbcTemplate;
+    private final HotelRepository hotelRepository;
     public Booking create(Booking booking){
         Map<String,Object> map1=jdbcTemplate.queryForMap("insert into hotel(hotelid,hotelname,city,rooms,landmark)values(?,?,?,?,?)returning hotelid,hotelname,city",
                 booking.getHotel().getHotelid(),
