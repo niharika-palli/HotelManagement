@@ -1,0 +1,20 @@
+{
+  "hotelid" : "880",
+  "hotelname" : "ABC",
+  "city" : "Bangalore",
+  "rooms" : "100",
+  "landmark" : "Whitefield",
+
+  "user" : [
+    {
+      "userid" : "440",
+
+      "booked" : [
+        {
+          "bookingid" : "0911",
+          "bookingstatus" : "PAID"
+        }
+      ]
+    }
+  ]
+}
