@@ -7,7 +7,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-//@AllArgsConstructor
 public class Hotel {
     private Long hotelid;
     private String city;

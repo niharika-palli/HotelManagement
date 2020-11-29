@@ -6,12 +6,17 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class User {
-    private int userId;
-    private String userName;
-    private String mobileNumber;
+    private int userid;
+    private String username;
+    private String mobilenumber;
     private String gender;
 
+    public User(int userid, String username, String mobilenumber, String gender) {
+        this.userid = userid;
+        this.username = username;
+        this.mobilenumber = mobilenumber;
+        this.gender = gender;
+    }
 }
 

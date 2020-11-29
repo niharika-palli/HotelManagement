@@ -16,7 +16,7 @@ import java.util.Map;
 @RequestMapping(path="book")
 public class BookingController {
    // private final BookingService bookingService;
-    private final HotelService hotelService;
+    //private final HotelService hotelService;
     private final CommonService commonService;
 
    /* @GetMapping(path="getdata",consumes=MediaType.APPLICATION_JSON_VALUE)
@@ -27,6 +27,12 @@ public class BookingController {
     public Booking createbook(@RequestBody Booking booking){
         return commonService.create(booking);
     }
+
+   /* @PostMapping(path="nested",consumes = MediaType.APPLICATION_JSON_VALUE)
+    public Booking createbook(@RequestBody Booking booking){
+        return commonService.create((Map<String, Object>) booking);
+    }*/
+
 
     @GetMapping(path = "database" , consumes = MediaType.APPLICATION_JSON_VALUE)
     public List getDataControl(@RequestParam(value="hotelid")Long hotelid) {
