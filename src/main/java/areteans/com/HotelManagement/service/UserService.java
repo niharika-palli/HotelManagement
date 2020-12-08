@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 @Service
 @RequiredArgsConstructor
 public class UserService {
@@ -13,4 +15,15 @@ public class UserService {
     {
         return user;
     }
+
+    public Map<String, Object> save(Map<String, Object> user) {
+        jdbcTemplate.update("insert into userdetails(userid,username,mobilenumber,gender) values(?,?,?,?)",
+                Integer.parseInt((String) user.get("userid")),
+                user.get("username"),
+                user.get("mobilenumber"),
+                user.get("gender"));
+
+        return user;
+    }
+
 }

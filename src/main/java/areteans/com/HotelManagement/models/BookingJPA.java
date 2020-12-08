@@ -1,27 +1,25 @@
 package areteans.com.HotelManagement.models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-/*@Getter
+import javax.persistence.*;
+
+@Getter
 @Setter
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name="booking")
 public class BookingJPA {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookingid;
     private Long hotelid;
+    private Long userid;
     private String hotelname;
     private String city;
     private String bookingstatus;
 
-    public BookingJPA(Long bookingid, Long hotelid, String hotelname, String city, String bookingstatus) {
-        this.bookingid = bookingid;
-        this.hotelid = hotelid;
-        this.hotelname = hotelname;
-        this.city = city;
-        this.bookingstatus = bookingstatus;
-    }
 
-}*/
+
+}

@@ -1,13 +1,13 @@
 package areteans.com.HotelManagement.service;
 
 //import areteans.com.HotelManagement.models.BookingJPA;
+import areteans.com.HotelManagement.models.BookingJPA;
 import areteans.com.HotelManagement.models.HotelJPA;
 //import areteans.com.HotelManagement.repository//.BookingRepository;
 import areteans.com.HotelManagement.repository.HotelRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -19,7 +19,7 @@ public class BookingService {
         Optional<BookingJPA> hho=bookingRepository.findById(hotelid);
             return hho.sethotelname(hotelname);
     }*/
-    public HotelJPA getHotelvalues(Long hotelid){
+  /*  public HotelJPA getHotelvalues(Long hotelid){
         Optional<HotelJPA> optionalHotelJPA=hotelRepository.findById(hotelid);
         return optionalHotelJPA.orElse(null);
     }
@@ -33,5 +33,8 @@ public class BookingService {
 
         return bookingRepository.save(bookingJPA);
     }*/
+
+
+
 
 }

@@ -22,7 +22,8 @@ public class HotelController {
         return this.hotelService.save(hotel);
     }
 
-    @GetMapping(path = "db" , consumes = MediaType.APPLICATION_JSON_VALUE)
+    @CrossOrigin
+    @GetMapping(path = "db")
     public List getDataControl(@RequestParam(value="city")String city) {
         return this.hotelService.getData(city);
     }
@@ -32,10 +33,15 @@ public class HotelController {
     public HotelJPA createHotel(@RequestBody HotelJPA hotelJPA) {
         return hotelService.saveHotel(hotelJPA);
     }
-    @GetMapping(path="getdata",consumes=MediaType.APPLICATION_JSON_VALUE)
+
+
+    @CrossOrigin
+    @GetMapping(path="getdata")
     public HotelJPA getdata(@RequestParam(value="hotelid")long hotelid){
         return hotelService.getHotelByID(hotelid);
     }
+
+
 
 }
 

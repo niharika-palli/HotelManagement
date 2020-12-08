@@ -1,47 +1,11 @@
-
-{"hotel": {
-  "hotelid": "80",
-  "hotelname": "ABC",
-  "city": "Bangalore",
-  "rooms": "100",
-  "landmark": "Whitefield"
-},
-  {
-  "userid": "870",
-  "username": "g1",
-  "mobilenumber": "5678998765",
-  "gender": "female"
-},
 {
-  "bookingid": "111",
+  "hotel": {
+    "hotelid": "440",
+    "hotelname": "ABC",
+    "city": "Bangalore",
+    "rooms": "100",
+    "landmark": "field"
+  },
+  "bookingid": "113",
   "bookingstatus": "PAID"
-}
-}
-
-
-
-{"hotel":
-{
-"hotelid": "80",
-"hotelname": "ABC",
-"city": "Bangalore",
-"rooms": "100",
-"landmark": "Whitefield"
-},"userdetails":
-{
-"userid": "870",
-"username": "g1",
-"mobilenumber": "5678998765",
-"gender": "female"
-},"booking":
-{
-"bookingid": "111",
-"bookingstatus": "PAID"
-}
-}
-
-
-{"booking":
-
-
 }
