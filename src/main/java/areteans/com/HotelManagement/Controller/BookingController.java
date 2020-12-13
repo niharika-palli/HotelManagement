@@ -40,6 +40,9 @@ public class BookingController {
     @GetMapping(path = "database")
     public List getDataControl(@RequestParam(value = "userid") Long userid) {
         return this.commonService.getData(userid);
+    }
+
+
 
 
    /* @GetMapping(path = "database" , consumes = MediaType.APPLICATION_JSON_VALUE)
@@ -52,5 +55,5 @@ public class BookingController {
         return commonService.simpleBookingJpa(hotelJPA);
     }*/
 
-    }
+
 }
